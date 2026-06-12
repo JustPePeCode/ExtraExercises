@@ -1,3 +1,6 @@
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
+
 namespace TheCourse.M03_CSharp101.Exercises.M03_Operators;
 
 public class MoreOperators
@@ -5,86 +8,121 @@ public class MoreOperators
     // 1. Easy: subtraction
     public int Subtract(int a, int b)
     {
-        throw new NotImplementedException(); // TODO
+        return a - b; // TODO
     }
 
     // 2. Easy: multiplication
     public int Multiply(int a, int b)
     {
-        throw new NotImplementedException(); // TODO
+        return a * b; // TODO
     }
 
     // 3. Easy: is the number odd?
     public bool IsOdd(int x)
     {
-        throw new NotImplementedException(); // TODO
+        if (x > 0)
+        {
+            return x % 2 == 1;
+        }
+        return x % 2 == -1;
+        // TODO
     }
 
     // 4. Easy: is the number positive (strictly greater than zero)?
     public bool IsPositive(int x)
     {
-        throw new NotImplementedException(); // TODO
+        return x > 0; // TODO
     }
 
     // 5. Easy: is the number zero?
     public bool IsZero(int x)
     {
-        throw new NotImplementedException(); // TODO
+        return x == 0; // TODO
     }
 
     // 6. Medium: is the number divisible by both 3 and 5?
     public bool IsDivisibleByThreeAndFive(int x)
     {
-        throw new NotImplementedException(); // TODO
+
+        return x % 5 == 0 && x % 3 == 0; // TODO
     }
 
     // 7. Medium: is the value within the inclusive range [min, max]?
     public bool IsBetweenInclusive(int value, int min, int max)
     {
-        throw new NotImplementedException(); // TODO
+        return value >= min && value <= max; // TODO
     }
 
     // 8. Medium: returns true if exactly one of the two booleans is true (XOR)
     public bool ExactlyOneIsTrue(bool left, bool right)
     {
-        throw new NotImplementedException(); // TODO
+        return left ^ right; // TODO
     }
 
     // 9. Medium: returns the largest of two numbers
     public int Max(int a, int b)
     {
-        throw new NotImplementedException(); // TODO
+        if (a > b)
+        {
+            return a;
+        }
+        return b; // TODO
     }
 
     // 10. Medium: returns the smallest of two numbers
     public int Min(int a, int b)
     {
-        throw new NotImplementedException(); // TODO
+        if (a < b)
+        {
+            return a;
+        }
+        return b
+        ; // TODO
     }
 
     // 11. Medium: returns "Pass" if score >= 50, otherwise "Fail"
     public string GetResult(int score)
     {
-        throw new NotImplementedException(); // TODO
+    if (score>=50)
+    {
+        return"Pass";
+    }
+    return "Fail"; // TODO
     }
 
     // 12. Medium: doubles the value if it is even, otherwise leaves it unchanged
     public int DoubleIfEven(int x)
     {
-        throw new NotImplementedException(); // TODO
+        if (x%2==0)
+        {
+            return x*2;
+        }
+        return x; // TODO
     }
 
     // 13. Medium: returns true if the year is a leap year
     // (divisible by 4, but not by 100, unless also divisible by 400)
     public bool IsLeapYear(int year)
     {
-        throw new NotImplementedException(); // TODO
+        if (year%400==0)
+        {
+           return year%4==0 ;
+        }
+        return year%4==0 && year%100!=0; // TODO
     }
 
     // 14. Hard: returns the middle value of three numbers
     public int Median(int a, int b, int c)
     {
-        throw new NotImplementedException(); // TODO
+       int [] array = [a,b,c,];
+       int count = array.Count();
+        int median = array[count/2];
+       if (count%2==0)
+       { 
+        int medianEven =(((array[(count/2)-1]) + (array[count/2]))/2);
+        return medianEven;
+       }
+       return median; // TODO
     }
 
     // 15. Hard: returns true if all three booleans are true

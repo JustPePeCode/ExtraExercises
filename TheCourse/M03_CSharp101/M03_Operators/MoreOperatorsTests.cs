@@ -2,7 +2,7 @@ namespace TheCourse.M03_CSharp101.Exercises.M03_Operators;
 
 public class MoreOperatorsTests
 {
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(8, 3, 5)]
     [InlineData(3, 8, -5)]
     [InlineData(5, 5, 0)]
@@ -11,7 +11,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().Subtract(a, b));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(4, 3, 12)]
     [InlineData(0, 5, 0)]
     [InlineData(-2, 3, -6)]
@@ -20,7 +20,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().Multiply(a, b));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(3, true)]
     [InlineData(4, false)]
     [InlineData(0, false)]
@@ -30,7 +30,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsOdd(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(5, true)]
     [InlineData(0, false)]
     [InlineData(-5, false)]
@@ -39,7 +39,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsPositive(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(0, true)]
     [InlineData(1, false)]
     [InlineData(-1, false)]
@@ -48,7 +48,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsZero(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(15, true)]
     [InlineData(30, true)]
     [InlineData(9, false)]
@@ -59,7 +59,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsDivisibleByThreeAndFive(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(5, 1, 10, true)]
     [InlineData(1, 1, 10, true)]
     [InlineData(10, 1, 10, true)]
@@ -70,7 +70,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsBetweenInclusive(value, min, max));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(true, false, true)]
     [InlineData(false, true, true)]
     [InlineData(true, true, false)]
@@ -80,7 +80,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().ExactlyOneIsTrue(left, right));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(5, 10, 10)]
     [InlineData(10, 5, 10)]
     [InlineData(7, 7, 7)]
@@ -90,7 +90,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().Max(a, b));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(5, 10, 5)]
     [InlineData(10, 5, 5)]
     [InlineData(7, 7, 7)]
@@ -100,7 +100,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().Min(a, b));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(75, "Pass")]
     [InlineData(50, "Pass")]
     [InlineData(49, "Fail")]
@@ -110,7 +110,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().GetResult(score));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(4, 8)]
     [InlineData(5, 5)]
     [InlineData(0, 0)]
@@ -120,7 +120,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().DoubleIfEven(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(2024, true)]
     [InlineData(2023, false)]
     [InlineData(2000, true)]
@@ -131,7 +131,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsLeapYear(year));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(1, 2, 3, 2)]
     [InlineData(3, 1, 2, 2)]
     [InlineData(5, 5, 1, 5)]
