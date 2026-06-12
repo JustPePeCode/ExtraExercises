@@ -7,8 +7,7 @@ public class Counter
 
     public Counter()
     {
-        var counter = new Counter();
-        counter.Value = 0;
+        throw new NotImplementedException(); 
     }
 
     public void Increment()
