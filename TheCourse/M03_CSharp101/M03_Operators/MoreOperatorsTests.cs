@@ -131,17 +131,26 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsLeapYear(year));
     }
 
+/*[Theory]
+    [InlineData(1, 2, 3, 6, 2.5)]
+    [InlineData(3, 1, 2, 21, 2.5)]
+    [InlineData(5, 5, 1, 69, 5)]
+    [InlineData(-1, -5, 0, 420, -0.5)]
+    public void Median_even_Array_returns_the_middle_value(decimal a, decimal b, decimal c, decimal d, decimal expected)
+    {
+        Assert.Equal(expected, new MoreOperators().Median(a, b, c, d));
+    }*/
     [Theory]
     [InlineData(1, 2, 3, 2)]
     [InlineData(3, 1, 2, 2)]
     [InlineData(5, 5, 1, 5)]
     [InlineData(-1, -5, 0, -1)]
-    public void Median_returns_the_middle_value(int a, int b, int c, int expected)
+    public void Median_returns_the_middle_value(decimal a, decimal b, decimal c, decimal expected)
     {
         Assert.Equal(expected, new MoreOperators().Median(a, b, c));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(true, true, true, true)]
     [InlineData(true, true, false, false)]
     [InlineData(false, false, false, false)]
@@ -150,7 +159,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().AllAreTrue(a, b, c));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(100, 25, 75)]
     [InlineData(200, 50, 100)]
     [InlineData(100, 0, 100)]
@@ -159,7 +168,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().ApplyPercentageDiscount(price, percentage));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData('a', true)]
     [InlineData('E', true)]
     [InlineData('b', false)]
@@ -169,7 +178,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsVowel(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(95, "A")]
     [InlineData(85, "B")]
     [InlineData(75, "C")]

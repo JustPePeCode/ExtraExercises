@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 namespace TheCourse.M03_CSharp101.Exercises.M03_Operators;
 
@@ -83,19 +84,19 @@ public class MoreOperators
     // 11. Medium: returns "Pass" if score >= 50, otherwise "Fail"
     public string GetResult(int score)
     {
-    if (score>=50)
-    {
-        return"Pass";
-    }
-    return "Fail"; // TODO
+        if (score >= 50)
+        {
+            return "Pass";
+        }
+        return "Fail"; // TODO
     }
 
     // 12. Medium: doubles the value if it is even, otherwise leaves it unchanged
     public int DoubleIfEven(int x)
     {
-        if (x%2==0)
+        if (x % 2 == 0)
         {
-            return x*2;
+            return x * 2;
         }
         return x; // TODO
     }
@@ -104,51 +105,82 @@ public class MoreOperators
     // (divisible by 4, but not by 100, unless also divisible by 400)
     public bool IsLeapYear(int year)
     {
-        if (year%400==0)
+        if (year % 400 == 0)
         {
-           return year%4==0 ;
+            return year % 4 == 0;
         }
-        return year%4==0 && year%100!=0; // TODO
+        return year % 4 == 0 && year % 100 != 0; // TODO
     }
 
     // 14. Hard: returns the middle value of three numbers
-    public int Median(int a, int b, int c)
+    public decimal Median(decimal a, decimal b, decimal c)
     {
-       int [] array = [a,b,c,];
-       int count = array.Count();
-        int median = array[count/2];
-       if (count%2==0)
-       { 
-        int medianEven =(((array[(count/2)-1]) + (array[count/2]))/2);
-        return medianEven;
-       }
-       return median; // TODO
+        decimal[] numbers = [a, b, c];
+        Array.Sort(numbers);
+        int count = numbers.Count();
+        decimal median = numbers[count / 2];
+        if (count % 2 == 0)
+        {
+            decimal medianEven = (numbers[(count / 2) - 1] + numbers[count / 2]) / 2;
+            return medianEven;
+        }
+        return median; // TODO
     }
 
     // 15. Hard: returns true if all three booleans are true
     public bool AllAreTrue(bool a, bool b, bool c)
     {
-        throw new NotImplementedException(); // TODO
+       return  a==true && b == true && c==true; // TODO
     }
 
     // 16. Hard: returns the price after applying a percentage discount
     // (e.g. ApplyPercentageDiscount(100, 25) returns 75)
     public decimal ApplyPercentageDiscount(decimal price, decimal percentage)
     {
-        throw new NotImplementedException(); // TODO
+        return price-(price*percentage/100); // TODO
     }
 
     // 17. Hard: returns true if the character is a vowel (a, e, i, o, u - case insensitive)
     public bool IsVowel(char c)
     {
-        throw new NotImplementedException(); // TODO
+        return "aeiou".Contains(char.ToLower(c));
+         /*var cc=char.ToLower(c);
+        return cc== 'a'||cc=='e' ||cc=='i' ||cc=='o' ||cc=='u';*/ // TODO
     }
 
     // 18. Hard: returns the grade letter based on score
     // 90+: "A", 80-89: "B", 70-79: "C", 60-69: "D", below 60: "F"
     public string GetGrade(int score)
     {
-        throw new NotImplementedException(); // TODO
+        if (score>=90)
+        {
+            return "A";
+
+        } 
+        if (score<90&&score>=85)
+        {
+            return "B";
+
+        } 
+        if (score<85&&score>=75)
+        {
+            return "C";
+
+        } 
+        if (score<75&&score>=60)
+        {
+            return "D";
+
+        } 
+        
+        
+            return "F";
+
+         
+
+
+        
+        ; // TODO
     }
 
     // 19. Hard: returns true if the number is a power of two
