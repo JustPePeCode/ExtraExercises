@@ -65,7 +65,12 @@ public class MoreOperatorsTests
     [InlineData(10, 1, 10, true)]
     [InlineData(0, 1, 10, false)]
     [InlineData(11, 1, 10, false)]
-    public void IsBetweenInclusive_checks_inclusive_range(int value, int min, int max, bool expected)
+    public void IsBetweenInclusive_checks_inclusive_range(
+        int value,
+        int min,
+        int max,
+        bool expected
+    )
     {
         Assert.Equal(expected, new MoreOperators().IsBetweenInclusive(value, min, max));
     }
@@ -131,15 +136,15 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsLeapYear(year));
     }
 
-/*[Theory]
-    [InlineData(1, 2, 3, 6, 2.5)]
-    [InlineData(3, 1, 2, 21, 2.5)]
-    [InlineData(5, 5, 1, 69, 5)]
-    [InlineData(-1, -5, 0, 420, -0.5)]
-    public void Median_even_Array_returns_the_middle_value(decimal a, decimal b, decimal c, decimal d, decimal expected)
-    {
-        Assert.Equal(expected, new MoreOperators().Median(a, b, c, d));
-    }*/
+    /*[Theory]
+        [InlineData(1, 2, 3, 6, 2.5)]
+        [InlineData(3, 1, 2, 21, 2.5)]
+        [InlineData(5, 5, 1, 69, 5)]
+        [InlineData(-1, -5, 0, 420, -0.5)]
+        public void Median_even_Array_returns_the_middle_value(decimal a, decimal b, decimal c, decimal d, decimal expected)
+        {
+            Assert.Equal(expected, new MoreOperators().Median(a, b, c, d));
+        }*/
     [Theory]
     [InlineData(1, 2, 3, 2)]
     [InlineData(3, 1, 2, 2)]
@@ -154,7 +159,12 @@ public class MoreOperatorsTests
     [InlineData(true, true, true, true)]
     [InlineData(true, true, false, false)]
     [InlineData(false, false, false, false)]
-    public void AllAreTrue_returns_true_only_when_all_three_are_true(bool a, bool b, bool c, bool expected)
+    public void AllAreTrue_returns_true_only_when_all_three_are_true(
+        bool a,
+        bool b,
+        bool c,
+        bool expected
+    )
     {
         Assert.Equal(expected, new MoreOperators().AllAreTrue(a, b, c));
     }
@@ -163,7 +173,11 @@ public class MoreOperatorsTests
     [InlineData(100, 25, 75)]
     [InlineData(200, 50, 100)]
     [InlineData(100, 0, 100)]
-    public void ApplyPercentageDiscount_subtracts_the_correct_percentage(decimal price, decimal percentage, decimal expected)
+    public void ApplyPercentageDiscount_subtracts_the_correct_percentage(
+        decimal price,
+        decimal percentage,
+        decimal expected
+    )
     {
         Assert.Equal(expected, new MoreOperators().ApplyPercentageDiscount(price, percentage));
     }
@@ -191,7 +205,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().GetGrade(score));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(1, true)]
     [InlineData(2, true)]
     [InlineData(3, false)]
@@ -203,7 +217,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsPowerOfTwo(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(true, true, true, 3)]
     [InlineData(true, false, true, 2)]
     [InlineData(false, false, false, 0)]

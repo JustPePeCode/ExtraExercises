@@ -44,7 +44,6 @@ public class MoreOperators
     // 6. Medium: is the number divisible by both 3 and 5?
     public bool IsDivisibleByThreeAndFive(int x)
     {
-
         return x % 5 == 0 && x % 3 == 0; // TODO
     }
 
@@ -77,8 +76,7 @@ public class MoreOperators
         {
             return a;
         }
-        return b
-        ; // TODO
+        return b; // TODO
     }
 
     // 11. Medium: returns "Pass" if score >= 50, otherwise "Fail"
@@ -130,56 +128,47 @@ public class MoreOperators
     // 15. Hard: returns true if all three booleans are true
     public bool AllAreTrue(bool a, bool b, bool c)
     {
-       return  a==true && b == true && c==true; // TODO
+        return a == true && b == true && c == true; // TODO
     }
 
     // 16. Hard: returns the price after applying a percentage discount
     // (e.g. ApplyPercentageDiscount(100, 25) returns 75)
     public decimal ApplyPercentageDiscount(decimal price, decimal percentage)
     {
-        return price-(price*percentage/100); // TODO
+        return price - (price * percentage / 100); // TODO
     }
 
     // 17. Hard: returns true if the character is a vowel (a, e, i, o, u - case insensitive)
     public bool IsVowel(char c)
     {
         return "aeiou".Contains(char.ToLower(c));
-         /*var cc=char.ToLower(c);
-        return cc== 'a'||cc=='e' ||cc=='i' ||cc=='o' ||cc=='u';*/ // TODO
+        /*var cc=char.ToLower(c);
+       return cc== 'a'||cc=='e' ||cc=='i' ||cc=='o' ||cc=='u';*/
+        // TODO
     }
 
     // 18. Hard: returns the grade letter based on score
     // 90+: "A", 80-89: "B", 70-79: "C", 60-69: "D", below 60: "F"
     public string GetGrade(int score)
     {
-        if (score>=90)
+        if (score >= 90)
         {
             return "A";
-
-        } 
-        if (score<90&&score>=85)
+        }
+        if (score < 90 && score >= 85)
         {
             return "B";
-
-        } 
-        if (score<85&&score>=75)
+        }
+        if (score < 85 && score >= 75)
         {
             return "C";
-
-        } 
-        if (score<75&&score>=60)
+        }
+        if (score < 75 && score >= 60)
         {
             return "D";
+        }
 
-        } 
-        
-        
-            return "F";
-
-         
-
-
-        
+        return "F";
         ; // TODO
     }
 
@@ -187,12 +176,31 @@ public class MoreOperators
     // (1, 2, 4, 8, 16, ... are powers of two)
     public bool IsPowerOfTwo(int x)
     {
-        throw new NotImplementedException(); // TODO
+        while (x >= 2 && x % 2 == 0 || x == 1)
+        {
+            if (x == 2 || x == 1)
+            {
+                return true;
+            }
+            x = x / 2;
+        }
+        return false;
+        ; // TODO
     }
 
     // 20. Hard: returns the number of true values among the three booleans
     public int CountTrue(bool a, bool b, bool c)
     {
-        throw new NotImplementedException(); // TODO
+        return new[] { a, b, c }.Count(x => x);
+        /* var x = 0;
+         if (a)
+             x += 1;
+         if (b)
+             x += 1;
+         if (c)
+             x += 1;
+ 
+         return x;*/
+        // TODO
     }
 }
