@@ -128,7 +128,7 @@ public class MoreOperators
     // 15. Hard: returns true if all three booleans are true
     public bool AllAreTrue(bool a, bool b, bool c)
     {
-        return a == true && b == true && c == true; // TODO
+        return a  && b  && c ; // TODO
     }
 
     // 16. Hard: returns the price after applying a percentage discount
@@ -178,11 +178,11 @@ public class MoreOperators
     {
         while (x >= 2 && x % 2 == 0 || x == 1)
         {
-            if (x == 2 || x == 1)
+            if ( x == 1)
             {
                 return true;
             }
-            x = x / 2;
+            x /= 2; // =  x = x/2;
         }
         return false;
         ; // TODO

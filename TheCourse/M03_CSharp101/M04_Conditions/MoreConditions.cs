@@ -39,12 +39,12 @@ public class MoreConditions
         // TODO
     }
 
-    // 6. Medium: returns the ticket price based on age
-    // under 12: 5, 12 to 64 (inclusive): 10, 65 and older: 7
+   
+    
     public int TicketPrice(int age) =>
         age switch
         {
-            <= 11 => 5,
+           <= 11 => 5,
             >= 65 => 7,
             _ => 10,
         };
