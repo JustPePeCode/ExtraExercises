@@ -127,7 +127,7 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().MembershipFee(age, isStudent));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(3, 4, 5, true)]
     [InlineData(1, 1, 1, true)]
     [InlineData(1, 1, 3, false)]
@@ -138,7 +138,7 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().IsValidTriangle(sideA, sideB, sideC));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(0.5, 0)]
     [InlineData(1, 0)]
     [InlineData(2, 2)]
@@ -150,18 +150,18 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().ParkingFee(hours));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("abc", false, "Zwak")]
     [InlineData("abcdef", false, "Gemiddeld")]
-    [InlineData("abcdef", true, "Sterk")]
+    [InlineData("abcdef1", true, "Sterk")]
     [InlineData("abcdefghij", false, "Sterk")]
-    [InlineData("abcdefghij", true, "Zeer sterk")]
+    [InlineData("abcdefghij1", true, "Zeer sterk")]
     public void PasswordStrength_combines_length_and_digit_presence(string password, bool containsDigit, string expected)
     {
         Assert.Equal(expected, new MoreConditions().PasswordStrength(password, containsDigit));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(true, true, "Fragiel - Internationaal")]
     [InlineData(true, false, "Fragiel")]
     [InlineData(false, true, "Internationaal")]

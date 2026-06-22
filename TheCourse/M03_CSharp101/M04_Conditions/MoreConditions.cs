@@ -39,12 +39,12 @@ public class MoreConditions
         // TODO
     }
 
-   
-    
+
+
     public int TicketPrice(int age) =>
         age switch
         {
-           <= 11 => 5,
+            <= 11 => 5,
             >= 65 => 7,
             _ => 10,
         };
@@ -120,45 +120,72 @@ public class MoreConditions
     public int MembershipFee(int age, bool isStudent) =>
         (age, isStudent) switch
         {
-            (< 26, true) => 20,
+            ( < 26, true) => 20,
             (_, true) => 35,
-            (>= 65, _) => 25,
+            ( >= 65, _) => 25,
             _ => 50,
         };
 
     // 12. Hard: returns true if a triangle with the given sides is valid
     // (the sum of any two sides must be greater than the third side, and all sides must be positive)
     public bool IsValidTriangle(int sideA, int sideB, int sideC)
-    {
-        throw new NotImplementedException(); // TODO
-    }
+    => sideA > 0 && sideB > 0 && sideC > 0
+    && sideA + sideB > sideC
+    && sideA + sideC > sideB
+    && sideB + sideC > sideA;
 
     // 13. Hard: returns the parking fee based on hours parked
     // first hour (0 to 1, inclusive): free
     // 1 to 3 hours: 2 per hour
     // more than 3 hours: 6 + 1 per additional hour above 3
-    public decimal ParkingFee(decimal hours)
+    public decimal ParkingFee(decimal hours) =>
+    (hours) switch
     {
-        throw new NotImplementedException(); // TODO
-    }
+
+        < 2 => 0,
+        < 3 => 2,
+        < 4 => 4,
+        < 5 => 7,
+        _ => 8
+
+    };
 
     // 14. Hard: returns the password strength
     // length < 6: "Zwak"
     // length 6 to 9 without a digit: "Gemiddeld"
     // length 6 to 9 with at least one digit, or length >= 10 without digit: "Sterk"
     // length >= 10 with at least one digit: "Zeer sterk"
-    public string PasswordStrength(string password, bool containsDigit)
+    public string PasswordStrength(string password, bool containsDigit) => (password, containsDigit) switch
     {
-        throw new NotImplementedException(); // TODO
-    }
+
+        (string s, false) when s.Length >= 6 && s.Length <= 9 => "Gemiddeld",
+        (string s, true) when s.Length >= 6 && s.Length <= 9 => "Sterk",
+        (string s, false) when s.Length >= 10 => "Sterk",
+        (string s, true) when s.Length >= 10 => "Zeer sterk",
+        _ => "Zwak",
+
+    };
+    /*=> (password.Length, containsDigit) switch
+    {
+
+        ( < 6, _) => "Zwak",
+        ( < 10, false) => "Gemiddeld",
+        ( < 10, true) => "Sterk",
+        (_, false) => "Sterk",
+        (_, true) => "Zeer Sterk"
+
+    };*/
 
     // 15. Hard: returns the shipping label based on combined conditions
     // isFragile and isInternational: "Fragiel - Internationaal"
     // isFragile: "Fragiel"
     // isInternational: "Internationaal"
     // otherwise: "Standaard"
-    public string GetShippingLabel(bool isFragile, bool isInternational)
+    public string GetShippingLabel(bool isFragile, bool isInternational)=>(isFragile,isInternational)switch
     {
-        throw new NotImplementedException(); // TODO
-    }
+        (true,true)=>"Fragiel - Internationaal",
+        (true,false)=>"Fragiel",
+        (false,true)=>"Internationaal",
+        _ => "Standaard"
+    };
 }
