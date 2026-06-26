@@ -1,3 +1,8 @@
+using System.Numerics;
+using System.Runtime.CompilerServices;
+using System.Runtime.ExceptionServices;
+using Xunit.Sdk;
+
 namespace TheCourse.M03_CSharp101.Exercises.M05_Strings;
 
 public class MoreStrings
@@ -5,91 +10,114 @@ public class MoreStrings
     // 1. Easy: returns the length of the string
     public int GetLength(string input)
     {
-        throw new NotImplementedException(); // TODO
+        return input.Length; // TODO
     }
 
     // 2. Easy: returns the string in lowercase
     public string ToLowerCase(string input)
     {
-        throw new NotImplementedException(); // TODO
+        return input.ToLower(); // TODO
     }
 
     // 3. Easy: returns true if the string is empty
     public bool IsEmpty(string input)
     {
-        throw new NotImplementedException(); // TODO
+        return input.Length == 0; // TODO
     }
 
     // 4. Easy: returns the string with leading and trailing whitespace removed
     public string TrimSpaces(string input)
     {
-        throw new NotImplementedException(); // TODO
+        return input.Trim(' '); // TODO
     }
 
     // 5. Medium: returns true if the string starts with the given prefix
     public bool StartsWithPrefix(string input, string prefix)
     {
-        throw new NotImplementedException(); // TODO
+        return input.StartsWith(prefix); // TODO
     }
 
     // 6. Medium: returns true if the string ends with the given suffix
     public bool EndsWithSuffix(string input, string suffix)
     {
-        throw new NotImplementedException(); // TODO
+        return input.EndsWith(suffix); // TODO
     }
 
     // 7. Medium: returns the string with the first letter capitalized
     // (e.g. "hello" becomes "Hello")
     public string Capitalize(string input)
     {
-        throw new NotImplementedException(); // TODO
+        if (input == "")
+        {
+            return "";
+        }
+        return char.ToUpper(input[0]) + input.Substring(1); // TODO
     }
 
     // 8. Medium: returns the string repeated a given number of times
     // (e.g. Repeat("ab", 3) returns "ababab")
     public string Repeat(string input, int times)
     {
-        throw new NotImplementedException(); // TODO
+        var result = "";
+        for (int i = 0; i < times; i++)
+        {
+            result += input;
+        }
+        return result;
     }
 
     // 9. Medium: returns the string with all spaces removed
     public string RemoveSpaces(string input)
     {
-        throw new NotImplementedException(); // TODO
+        return input.Replace(" ", "");
+        // TODO
     }
 
     // 10. Medium: returns the index of the first occurrence of the keyword,
     // or -1 if it is not found
     public int FindKeyword(string sentence, string keyword)
     {
-        throw new NotImplementedException(); // TODO
+        return sentence.IndexOf(keyword); // TODO
     }
 
     // 11. Medium: returns the string reversed
     // (e.g. "hello" becomes "olleh")
     public string Reverse(string input)
     {
-        throw new NotImplementedException(); // TODO
+        return string.Concat(input.Reverse()); // TODO
     }
 
     // 12. Hard: returns true if the string is a palindrome (reads the same forwards and backwards)
     // case insensitive, e.g. "Level" and "level" are both palindromes
     public bool IsPalindrome(string input)
     {
-        throw new NotImplementedException(); // TODO
+        return input.ToLower() == string.Concat(input.ToLower().Reverse()); // TODO
     }
 
     // 13. Hard: returns the number of times the given character appears in the string
     public int CountOccurrences(string input, char character)
     {
-        throw new NotImplementedException(); // TODO
+        var count = 0;
+        foreach (var c in input)
+        {
+            if (character == c)
+            {
+                count += 1;
+            }
+        }
+        return count;
     }
 
     // 14. Hard: returns each word capitalized, separated by single spaces
     // (e.g. "the quick   fox" becomes "The Quick Fox")
     public string TitleCase(string sentence)
     {
-        throw new NotImplementedException(); // TODO
+        var words = sentence.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+        for (int i = 0; i < words.Count(); i++)
+        {
+            words[i] = char.ToUpper(words[i][0]) + words[i].Substring(1);
+        }
+        return string.Join(" ", words);
     }
 
     // 15. Hard: returns the initials of each word in uppercase, without separators

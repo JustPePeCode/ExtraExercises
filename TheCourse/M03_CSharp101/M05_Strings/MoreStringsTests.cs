@@ -2,7 +2,7 @@ namespace TheCourse.M03_CSharp101.Exercises.M05_Strings;
 
 public class MoreStringsTests
 {
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("hello", 5)]
     [InlineData("", 0)]
     [InlineData("a", 1)]
@@ -11,7 +11,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().GetLength(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("HELLO", "hello")]
     [InlineData("Hello World", "hello world")]
     [InlineData("already low", "already low")]
@@ -20,7 +20,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().ToLowerCase(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("", true)]
     [InlineData("a", false)]
     [InlineData("hello", false)]
@@ -29,7 +29,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().IsEmpty(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("  hello  ", "hello")]
     [InlineData("hello", "hello")]
     [InlineData("   ", "")]
@@ -38,7 +38,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().TrimSpaces(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("unbelievable", "un", true)]
     [InlineData("unbelievable", "believ", false)]
     [InlineData("Hello", "hello", false)]
@@ -47,7 +47,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().StartsWithPrefix(input, prefix));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("unbelievable", "able", true)]
     [InlineData("unbelievable", "un", false)]
     [InlineData("Hello", "hello", false)]
@@ -56,7 +56,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().EndsWithSuffix(input, suffix));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("hello", "Hello")]
     [InlineData("Hello", "Hello")]
     [InlineData("a", "A")]
@@ -66,7 +66,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().Capitalize(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("ab", 3, "ababab")]
     [InlineData("x", 4, "xxxx")]
     [InlineData("hi", 0, "")]
@@ -76,7 +76,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().Repeat(input, times));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("hello world", "helloworld")]
     [InlineData("a b c", "abc")]
     [InlineData("nospaces", "nospaces")]
@@ -85,7 +85,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().RemoveSpaces(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("the quick brown fox", "quick", 4)]
     [InlineData("jumped over", "lazy", -1)]
     [InlineData("hello world", "hello", 0)]
@@ -94,7 +94,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().FindKeyword(sentence, keyword));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("hello", "olleh")]
     [InlineData("ab", "ba")]
     [InlineData("a", "a")]
@@ -104,7 +104,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().Reverse(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("level", true)]
     [InlineData("Level", true)]
     [InlineData("hello", false)]
@@ -115,7 +115,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().IsPalindrome(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("banana", 'a', 3)]
     [InlineData("hello", 'l', 2)]
     [InlineData("hello", 'z', 0)]
@@ -124,7 +124,7 @@ public class MoreStringsTests
         Assert.Equal(expected, new MoreStrings().CountOccurrences(input, character));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("the quick brown fox", "The Quick Brown Fox")]
     [InlineData("the quick   fox", "The Quick Fox")]
     [InlineData("hello", "Hello")]
