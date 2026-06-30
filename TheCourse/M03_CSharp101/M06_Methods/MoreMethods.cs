@@ -1,28 +1,34 @@
 namespace TheCourse.M03_CSharp101.Exercises.M06_Methods;
+
 public class MoreMethods
 {
     // 1. Easy: returns the difference between two numbers
     public int Subtract(int a, int b)
     {
-        throw new NotImplementedException();
+        return a - b;
     }
 
     // 2. Easy: returns the cube of a number (x * x * x)
     public int Cube(int x)
     {
-        throw new NotImplementedException();
+        return x * x * x;
     }
 
     // 3. Easy: returns true if the number is positive (greater than zero)
     public bool IsPositive(int number)
     {
-        throw new NotImplementedException();
+        return number > 0;
     }
 
     // 4. Easy: returns the smallest of two numbers
     public int Min(int a, int b)
     {
-        throw new NotImplementedException();
+        if (a > b)
+        {
+            return b;
+        }
+        return a;
+        ;
     }
 
     // 5. Medium: returns a farewell message, using a default name if none is given
@@ -30,26 +36,33 @@ public class MoreMethods
     // DefaultFarewell() => "Goodbye, friend!"
     public string DefaultFarewell(string name = "friend")
     {
-        throw new NotImplementedException();
+        if (name == "")
+        {
+            return "GoodBye, friend!";
+        }
+        return $"Goodbye, {name}!";
+        ;
     }
 
     // 6. Medium: returns the area of a rectangle
     public int GetArea(int width, int height)
     {
-        throw new NotImplementedException();
+        return width * height;
     }
 
     // 7. Medium: returns a formatted price message
     // GetPriceMessage("coffee", 2) => "coffee costs 2 euros."
     public string GetPriceMessage(string product, int price)
     {
-        throw new NotImplementedException();
+        return $"{product} costs {price} euros.";
     }
 
     // 8. Medium: returns the average of three numbers as a double
     public double Average(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        double[] numbers = { a, b, c };
+
+        return numbers.Sum() / numbers.Count();
     }
 
     // 9. Medium: returns the number multiplied by a factor, with a default factor of 2
@@ -57,13 +70,13 @@ public class MoreMethods
     // Double(5, 3) => 15
     public int Double(int number, int factor = 2)
     {
-        throw new NotImplementedException();
+        return number * factor;
     }
 
     // 10. Medium: returns true if all three numbers are equal to each other
     public bool AllEqual(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        return a == b && b == c;
     }
 
     // 11. Hard: returns the sum of all numbers from 1 up to and including n

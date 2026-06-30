@@ -1,7 +1,7 @@
 namespace TheCourse.M03_CSharp101.Exercises.M06_Methods;
 public class MoreMethodsTests
 {
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void Subtract_returns_difference_of_two_numbers()
     {
         var methods = new MoreMethods();
@@ -9,7 +9,7 @@ public class MoreMethodsTests
         Assert.Equal(6, result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void Cube_returns_number_to_the_power_of_three()
     {
         var methods = new MoreMethods();
@@ -17,7 +17,7 @@ public class MoreMethodsTests
         Assert.Equal(27, result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void IsPositive_with_positive_number_returns_true()
     {
         var methods = new MoreMethods();
@@ -25,7 +25,7 @@ public class MoreMethodsTests
         Assert.True(result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void IsPositive_with_negative_number_returns_false()
     {
         var methods = new MoreMethods();
@@ -33,7 +33,7 @@ public class MoreMethodsTests
         Assert.False(result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void IsPositive_with_zero_returns_false()
     {
         var methods = new MoreMethods();
@@ -41,7 +41,7 @@ public class MoreMethodsTests
         Assert.False(result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void Min_when_first_number_is_smaller_returns_first_number()
     {
         var methods = new MoreMethods();
@@ -49,7 +49,7 @@ public class MoreMethodsTests
         Assert.Equal(3, result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void Min_when_second_number_is_smaller_returns_second_number()
     {
         var methods = new MoreMethods();
@@ -57,7 +57,7 @@ public class MoreMethodsTests
         Assert.Equal(4, result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void DefaultFarewell_with_name_returns_goodbye_message()
     {
         var methods = new MoreMethods();
@@ -65,7 +65,7 @@ public class MoreMethodsTests
         Assert.Equal("Goodbye, Bob!", result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void DefaultFarewell_without_name_returns_default_goodbye_message()
     {
         var methods = new MoreMethods();
@@ -73,7 +73,7 @@ public class MoreMethodsTests
         Assert.Equal("Goodbye, friend!", result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void GetArea_returns_width_times_height()
     {
         var methods = new MoreMethods();
@@ -81,7 +81,7 @@ public class MoreMethodsTests
         Assert.Equal(20, result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void GetPriceMessage_returns_formatted_message()
     {
         var methods = new MoreMethods();
@@ -89,7 +89,7 @@ public class MoreMethodsTests
         Assert.Equal("coffee costs 2 euros.", result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void Average_returns_average_of_three_numbers()
     {
         var methods = new MoreMethods();
@@ -97,7 +97,7 @@ public class MoreMethodsTests
         Assert.Equal(3.0, result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void Average_can_return_a_fractional_result()
     {
         var methods = new MoreMethods();
@@ -105,7 +105,7 @@ public class MoreMethodsTests
         Assert.Equal(5.0 / 3.0, result, 5);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void Double_without_factor_doubles_the_number()
     {
         var methods = new MoreMethods();
@@ -113,7 +113,7 @@ public class MoreMethodsTests
         Assert.Equal(10, result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void Double_with_factor_multiplies_by_the_given_factor()
     {
         var methods = new MoreMethods();
@@ -121,7 +121,7 @@ public class MoreMethodsTests
         Assert.Equal(15, result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void AllEqual_when_all_numbers_are_equal_returns_true()
     {
         var methods = new MoreMethods();
@@ -129,7 +129,7 @@ public class MoreMethodsTests
         Assert.True(result);
     }
 
-    [Fact(Skip = "To Do")]
+    [Fact]
     public void AllEqual_when_numbers_differ_returns_false()
     {
         var methods = new MoreMethods();
